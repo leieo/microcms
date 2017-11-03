@@ -1,9 +1,6 @@
 <?php
 
-// variables qui deviendront les paramètres de la base de données :
-$dataSourceName = 'mysql:host=localhost;dbname=microcms;charset=utf8';
-$user = 'root';
-$password = 'simplonco';
+require 'config.php';
 
 
 // connexion à la base de donnée et message d'erreur :
