@@ -1,17 +1,16 @@
 <?php
 
-require 'config.php';
-
-
-// connexion à la base de donnée et message d'erreur :
-try {
-    $database = new PDO($dataSourceName, $user, $password);
-} catch (PDOException $e) {
-    echo 'Connexion échouée : ' . $e->getMessage();
-} 
+require 'pdo.php';
 
 // récupération des données qui nous intéressent :
-$posts = $database->query('SELECT * FROM t_posts order by post_id desc'); 
+$posts = $pdo->query('SELECT * FROM t_posts order by post_id desc'); 
+
+// pour être plus explicite, on pourrait ecrire :
+//
+// $pdo_statement = $pdo->query('SELECT * FROM t_posts');
+// $posts = $pdo_statement;
+// 
+// (où $posts est un alias de la variable $pdo_statement)
 
 
 
