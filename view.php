@@ -26,6 +26,16 @@
 
         ?>
 
+        <!-- -->
+
+        <form action="form.php" method="POST">
+            <p>
+                <input type="text" name="titre" />
+                <textarea name="contenu" rows="8" cols="60"></textarea>
+                <input type="submit" value="Valider" />
+            </p>
+        </form>
+
         <footer class="footer">
 
             <a href="https://github.com/bpesquet/OC-MicroCMS">MicroCMS</a> is a minimalistic CMS built as a showcase for modern PHP development
