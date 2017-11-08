@@ -26,26 +26,20 @@ function getPostlist() {
 }
 
 
-function createPosts() {
-	require 'pdo.php';
-
-	$pdo->exec('INSERT INTO t_posts(post_title, post_content) VALUES(\'echo $_POST[\'titre\']\', \'echo $_POST[\'contenu\']\')');
-	
-	echo 'Nouvel article ajouté :';
-}
-
-
-
-
-function create() {
+function createPost() {
 
     $title = $_POST['titre'];
     $content = $_POST['contenu'];
 
     require 'pdo.php';
 
-    $pdo->exec("INSERT INTO t_posts(post_title, post_content) VALUES('$title', '$content')");
+    $query = $pdo->prepare('INSERT INTO t_posts(post_title, post_content) VALUES(:post_title, :post_content)');
+    $query->execute(array(
+    	post_title => $title,
+    	post_content => $content
+    ));
     
     echo 'Nouvel article ajouté :';
 
 }
+

@@ -10,7 +10,7 @@
 
     require 'model.php';
 
-    create();
+    createPost();
 
     ?>
 
