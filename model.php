@@ -35,8 +35,8 @@ function createPost() {
 
     $query = $pdo->prepare('INSERT INTO t_posts(post_title, post_content) VALUES(:post_title, :post_content)');
     $query->execute(array(
-    	post_title => $title,
-    	post_content => $content
+    	post_title => htmlspecialchars($title),
+    	post_content => htmlspecialchars($content),
     ));
     
     echo 'Nouvel article ajouté :';

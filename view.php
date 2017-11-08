@@ -28,7 +28,7 @@
 
         <!-- -->
 
-        <form action="form.php" method="POST">
+        <form action="create.php" method="POST">
             <p>
                 <input type="text" name="titre" />
                 <textarea name="contenu" rows="8" cols="60"></textarea>
