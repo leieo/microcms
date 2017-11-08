@@ -3,6 +3,7 @@
 require 'model.php';
 
 $posts = getPosts();
+$postlist = getPostlist();
 
 // on inclut et exécute le fichier view.php :
 require 'view.php';

@@ -16,8 +16,8 @@
         <?php foreach ($posts as $post):  ?>
 
         <article>
-            <h2><?php echo $post ['post_title'] ?></h2>
-            <p><?php echo $post['post_content'] ?></p>
+            <h2><?php echo $post ['post_title']; ?></h2>
+            <p><?php echo $post['post_content']; ?></p>
         </article>
 
         <?php 
@@ -36,6 +36,15 @@
             </p>
         </form>
 
+
+
+        <ul>
+        <?php foreach ($postlist as $line) {
+
+        ?>
+            <li><?php echo $line['post_title']; ?></li>
+        <?php } ?>
+        </ul>
         <footer class="footer">
 
             <a href="https://github.com/bpesquet/OC-MicroCMS">MicroCMS</a> is a minimalistic CMS built as a showcase for modern PHP development
