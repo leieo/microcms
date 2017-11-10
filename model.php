@@ -43,3 +43,30 @@ function createPost() {
 
 }
 
+function readPost() {
+
+	require 'pdo.php';
+
+	$pdo_statement = $pdo->query('SELECT * FROM t_posts WHERE post_id = $readPost_id');
+	return $pdo_statement;
+}
+
+/*
+function updatePost() {
+
+	$post_id = ....;
+
+    require 'pdo.php';
+
+    $query = $pdo->prepare('UPDATE t_posts SET post_title = :newtitle, post_content = :newcontent WHERE post_id = :post_id');
+    $query->execute(array(
+    	'post_id'=> $post_id,
+    	'newtitle' => .......,
+    	'newcontent' => .......,
+    ));
+    
+    echo 'Nouvel article ajouté :';
+
+}
+*/
+

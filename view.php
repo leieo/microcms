@@ -16,8 +16,15 @@
         <?php foreach ($posts as $post):  ?>
 
         <article>
-            <h2><?php echo $post ['post_title']; ?></h2>
-            <p><?php echo $post['post_content']; ?></p>
+            <h2>
+                <a href="read.php?id=<?php echo $post['post_id'];?>">
+                    <?php echo $post ['post_title']; ?>
+                </a>
+            </h2>
+            <p>
+                <?php echo $post['post_content']; ?>
+
+            </p>
         </article>
 
         <?php 
